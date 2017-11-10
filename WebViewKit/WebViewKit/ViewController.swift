@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var webViewPreview: WKWebView!
@@ -14,6 +15,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let url = URL(string: "https://www.google.com")
+        let request = URLRequest(url: url!)
+        
+        webViewPreview.load(request)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
     override func didReceiveMemoryWarning() {
