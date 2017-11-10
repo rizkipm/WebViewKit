@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let url = URL(string: "https://www.google.com")
+        let url = URL(string: "http://bbg-alilmu.com/archives/category/nama-sifat-allah")
         let request = URLRequest(url: url!)
         
         webViewPreview.load(request)
